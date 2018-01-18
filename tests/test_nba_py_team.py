@@ -2,6 +2,7 @@ from nba_py import team
 from nba_py.player import get_player
 from nba_py.constants import TEAMS
 
+
 def test():
     team_id = TEAMS['ATL']['id']
     player_id = get_player('Lebron', 'James')

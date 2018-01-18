@@ -1,10 +1,14 @@
 from datetime import datetime
 
-_curr_year = datetime.now().year
-if datetime.now().month > 6:
-    CURRENT_SEASON = str(_curr_year) + "-" + str(_curr_year + 1)[2:]
-else:
-    CURRENT_SEASON = str(_curr_year - 1) + "-" + str(_curr_year)[2:]
+
+def set_current_season():
+    curr_year = datetime.now().year
+    current_season = '{}-{}'.format(curr_year - 1, str(curr_year)[2:])
+    if datetime.now().month > 6:
+        current_season = '{}-{}'.format(curr_year, str(curr_year+1)[2:])
+    return current_season
+
+CURRENT_SEASON = set_current_season()
 
 TEAMS = {
     'ATL': {
