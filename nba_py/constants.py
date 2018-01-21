@@ -8,6 +8,7 @@ def set_current_season():
         current_season = '{}-{}'.format(curr_year, str(curr_year+1)[2:])
     return current_season
 
+
 CURRENT_SEASON = set_current_season()
 
 TEAMS = {
